@@ -1,0 +1,47 @@
+.header{
+    text-align: center;
+}
+
+.section1{
+    display:grid;
+    grid-template-columns: repeat(3,1fr); /*3 equal columns*/
+    grid-template-rows:auto;
+    gap: 10px;
+
+}
+
+
+
+@media (max-width: 600px){
+    .grid-container{
+        grid-template-columns: 1fr;/*stacks into 1 column on small screens*/
+    }
+}
+
+
+
+.grid{
+
+    border:grey;
+    border-style: solid;
+    height: 200px;
+    width: 300px;
+    border-top-color: blue;
+    border-top-width: 5px;
+    padding: 20px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.grid3{
+    grid-column: 2;
+    grid-row: 2;
+
+}
+.grid4{
+    grid-column: 3;
+    grid-row: 1;
+}
