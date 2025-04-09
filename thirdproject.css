@@ -1,26 +1,55 @@
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+    
+p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+   
+}  
+
 .header{
     text-align: center;
 }
 
-.section1{
+.card-container{
     display:grid;
-    grid-template-columns: repeat(3,1fr); /*3 equal columns*/
-    grid-template-rows:auto;
+    grid-template-columns: repeat(3,0fr); /*3 equal columns*/
+    grid-template-rows:repeat(1fr);
     gap: 10px;
+    justify-content: center;
+
 
 }
 
 
 
-@media (max-width: 600px){
-    .grid-container{
-        grid-template-columns: 1fr;/*stacks into 1 column on small screens*/
-    }
-}
 
 
 
-.grid{
+
+.card{
 
     border:grey;
     border-style: solid;
@@ -36,12 +65,58 @@
     background-color: white;
 }
 
-.grid3{
+.card-combined{
+    grid-column: 2;
+    grid-row: 1;
+    width: 350px;
+}
+
+.card--supervisor{
+    margin-top: 150px;
+    border-top-color: turquoise;
+}
+.card--teambuilder{
+    margin-bottom: 30px;
+    border-top-color: red;
+}
+.card--karma{
     grid-column: 2;
     grid-row: 2;
-
+    border-top-color: gold;
 }
-.grid4{
+.card--calculator{
     grid-column: 3;
     grid-row: 1;
+    margin-top: 150px;
+    border-top-color: blue;
 }
+
+@media (max-width: 600px){
+  .cardcontainer1
+    .card{
+        grid-template-columns: 1fr;/*stacks into 1 column on small screens*/
+        grid-template-rows: repeat(4,auto);
+        justify-items: center;
+    }
+
+
+    
+    
+        .card card--supervisor{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .card card--teambuilder{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .card card--karma{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .card card--calculator{
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+} 
